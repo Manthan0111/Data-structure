@@ -29,7 +29,6 @@ for(i=0; i<size; i++)
 printf("%d \t", array[i]); 
 printf("\n\nEnter No. to be search : "); 
 scanf("%d", &sElement);
-
 first= 0; 
 last = size - 1; 
 middle = (first+last)/2; 
@@ -39,14 +38,14 @@ if (array[middle] < sElement)
 first = middle + 1; 
 else if (array[middle] == sElement) 
 { 
+printf("Element found at index %d \n", middle); 
+break;
 } 
 else 
-printf("Element found at index %d \n", middle); 
-break; 
 last = middle - 1; 
 middle = (first + last)/2; 
 } 
 if (first > last) 
 printf("Element Not found in the Array."); 
 getch(); 
-} 
+}
